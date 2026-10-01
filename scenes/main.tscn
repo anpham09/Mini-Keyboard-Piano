@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1og5ocv4xux8"]
+[gd_scene load_steps=12 format=3 uid="uid://b1og5ocv4xux8"]
 
 [ext_resource type="PackedScene" uid="uid://ckfeffiec1dke" path="res://scenes/piano.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dxf7u5f7iqvyb" path="res://scripts/main.gd" id="1_ya4ey"]
 [ext_resource type="FontFile" uid="uid://0q2tpaghfflr" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_sugp2"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://assets/fonts/PixelOperator8.ttf" id="3_jyhfs"]
+[ext_resource type="AudioStream" uid="uid://blqumnrbqe7yq" path="res://audio/do.wav" id="4_tefeu"]
+[ext_resource type="AudioStream" uid="uid://5r1rtmv5sarg" path="res://audio/re.wav" id="5_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://br38xcf78tl4d" path="res://audio/mi.wav" id="6_tipki"]
+[ext_resource type="AudioStream" uid="uid://c4kagnj7gfkti" path="res://audio/fa.wav" id="7_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://bkl1jb45avn33" path="res://audio/sol.wav" id="8_tipki"]
+[ext_resource type="AudioStream" uid="uid://b1dx4aoes8wy5" path="res://audio/la.wav" id="9_85g3d"]
+[ext_resource type="AudioStream" uid="uid://dw23dmh0vff6o" path="res://audio/si.wav" id="10_choun"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -11,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ya4ey")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -42,7 +51,7 @@ offset_bottom = 124.0
 theme_override_colors/font_color = Color(0.23435324, 0.48969698, 0.30105662, 1)
 theme_override_fonts/font = ExtResource("3_jyhfs")
 theme_override_font_sizes/font_size = 24
-text = "Fell free to play around with your 
+text = "Play notes with your keyboard using
 A, S, D, F, G, H, J keys"
 horizontal_alignment = 1
 
@@ -57,7 +66,17 @@ offset_left = 102.0
 offset_top = 166.0
 offset_right = 204.0
 offset_bottom = 522.0
-color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+color = Color(0.1926207, 0.7176447, 0.5411228, 0.30980393)
+
+[node name="Heart" type="Label" parent="Keys/A"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 214.0
+offset_right = 89.0
+offset_bottom = 324.0
+theme_override_colors/font_color = Color(0.17947146, 0.24380383, 0.09674392, 1)
+theme_override_font_sizes/font_size = 80
+text = "❣"
 
 [node name="S" type="ColorRect" parent="Keys"]
 layout_mode = 0
@@ -65,7 +84,17 @@ offset_left = 212.0
 offset_top = 167.0
 offset_right = 314.0
 offset_bottom = 524.0
-color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+color = Color(0.19215687, 0.7176471, 0.5411765, 0.30980393)
+
+[node name="Heart2" type="Label" parent="Keys/S"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 214.0
+offset_right = 87.0
+offset_bottom = 324.0
+theme_override_colors/font_color = Color(0.17947146, 0.24380383, 0.09674392, 1)
+theme_override_font_sizes/font_size = 80
+text = "❣"
 
 [node name="D" type="ColorRect" parent="Keys"]
 layout_mode = 0
@@ -73,7 +102,17 @@ offset_left = 321.0
 offset_top = 166.0
 offset_right = 423.0
 offset_bottom = 523.0
-color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+color = Color(0.19215687, 0.7176471, 0.5411765, 0.30980393)
+
+[node name="Heart3" type="Label" parent="Keys/D"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 217.0
+offset_right = 92.0
+offset_bottom = 327.0
+theme_override_colors/font_color = Color(0.17947146, 0.24380383, 0.09674392, 1)
+theme_override_font_sizes/font_size = 80
+text = "❣"
 
 [node name="F" type="ColorRect" parent="Keys"]
 layout_mode = 0
@@ -81,7 +120,7 @@ offset_left = 429.0
 offset_top = 166.0
 offset_right = 531.0
 offset_bottom = 523.0
-color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+color = Color(0.19215687, 0.7176471, 0.5411765, 0.30980393)
 
 [node name="G" type="ColorRect" parent="Keys"]
 layout_mode = 0
@@ -89,7 +128,7 @@ offset_left = 540.0
 offset_top = 165.0
 offset_right = 642.0
 offset_bottom = 522.0
-color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+color = Color(0.19215687, 0.7176471, 0.5411765, 0.30980393)
 
 [node name="H" type="ColorRect" parent="Keys"]
 layout_mode = 0
@@ -97,7 +136,7 @@ offset_left = 650.0
 offset_top = 165.0
 offset_right = 752.0
 offset_bottom = 522.0
-color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+color = Color(0.19215687, 0.7176471, 0.5411765, 0.30980393)
 
 [node name="J" type="ColorRect" parent="Keys"]
 layout_mode = 0
@@ -105,7 +144,7 @@ offset_left = 759.0
 offset_top = 165.0
 offset_right = 861.0
 offset_bottom = 522.0
-color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+color = Color(0.19215687, 0.7176471, 0.5411765, 0.30980393)
 
 [node name="Black Notes" type="Node" parent="."]
 
@@ -143,3 +182,26 @@ offset_top = 165.0
 offset_right = 804.0
 offset_bottom = 379.0
 color = Color(0, 0, 0, 1)
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Do" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("4_tefeu")
+
+[node name="Re" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("5_o6xl0")
+
+[node name="Mi" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("6_tipki")
+
+[node name="Fa" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("7_o6xl0")
+
+[node name="Sol" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("8_tipki")
+
+[node name="La" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("9_85g3d")
+
+[node name="Si" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("10_choun")

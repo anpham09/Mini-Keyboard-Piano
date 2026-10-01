@@ -43,5 +43,103 @@ theme_override_colors/font_color = Color(0.23435324, 0.48969698, 0.30105662, 1)
 theme_override_fonts/font = ExtResource("3_jyhfs")
 theme_override_font_sizes/font_size = 24
 text = "Fell free to play around with your 
-A, S, D, F, G, H, J, K keys"
+A, S, D, F, G, H, J keys"
 horizontal_alignment = 1
+
+[node name="Keys" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="A" type="ColorRect" parent="Keys"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 166.0
+offset_right = 204.0
+offset_bottom = 522.0
+color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+
+[node name="S" type="ColorRect" parent="Keys"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 167.0
+offset_right = 314.0
+offset_bottom = 524.0
+color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+
+[node name="D" type="ColorRect" parent="Keys"]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 166.0
+offset_right = 423.0
+offset_bottom = 523.0
+color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+
+[node name="F" type="ColorRect" parent="Keys"]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 166.0
+offset_right = 531.0
+offset_bottom = 523.0
+color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+
+[node name="G" type="ColorRect" parent="Keys"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 165.0
+offset_right = 642.0
+offset_bottom = 522.0
+color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+
+[node name="H" type="ColorRect" parent="Keys"]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 165.0
+offset_right = 752.0
+offset_bottom = 522.0
+color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+
+[node name="J" type="ColorRect" parent="Keys"]
+layout_mode = 0
+offset_left = 759.0
+offset_top = 165.0
+offset_right = 861.0
+offset_bottom = 522.0
+color = Color(0.58431375, 0.98039216, 0.80784315, 0.14901961)
+
+[node name="Black Notes" type="Node" parent="."]
+
+[node name="1" type="ColorRect" parent="Black Notes"]
+offset_left = 159.0
+offset_top = 165.0
+offset_right = 230.0
+offset_bottom = 379.0
+color = Color(0, 0, 0, 1)
+
+[node name="2" type="ColorRect" parent="Black Notes"]
+offset_left = 287.0
+offset_top = 166.0
+offset_right = 358.0
+offset_bottom = 380.0
+color = Color(0, 0, 0, 1)
+
+[node name="3" type="ColorRect" parent="Black Notes"]
+offset_left = 477.0
+offset_top = 164.0
+offset_right = 548.0
+offset_bottom = 378.0
+color = Color(0, 0, 0, 1)
+
+[node name="4" type="ColorRect" parent="Black Notes"]
+offset_left = 604.0
+offset_top = 164.0
+offset_right = 675.0
+offset_bottom = 378.0
+color = Color(0, 0, 0, 1)
+
+[node name="5" type="ColorRect" parent="Black Notes"]
+offset_left = 733.0
+offset_top = 165.0
+offset_right = 804.0
+offset_bottom = 379.0
+color = Color(0, 0, 0, 1)

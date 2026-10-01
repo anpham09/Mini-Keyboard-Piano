@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckfeffiec1dke"]
+
+[ext_resource type="Texture2D" uid="uid://b4ba8v05gm5je" path="res://assets/temporary piano.png" id="1_vxdml"]
+
+[node name="Piano" type="Node2D"]
+
+[node name="TemporaryPiano" type="Sprite2D" parent="."]
+position = Vector2(489, 331)
+scale = Vector2(0.7156358, 0.9334765)
+texture = ExtResource("1_vxdml")
